@@ -15,7 +15,7 @@ requires = [
 # The remaining package metadata
 [project]
 name = "PyAstronomy-ext"
-version = "2.0.0" # You would update this from "1" in your original
+version = "2" # You would update this from "1" in your original
 description = "Optional extension for PyAstronomy."
 authors = [
     {name = "PyA group", email = "stefan.czesla@hs.uni-hamburg.de"}
