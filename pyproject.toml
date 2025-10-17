@@ -27,3 +27,15 @@ dependencies = [
     "numpy",
     "six",
 ]
+requires-python = ">=3.8"
+
+[tool.cibuildwheel]
+# Skip tests for now to keep it simple. By default, it would try to run
+# your package's test suite, which you haven't configured.
+test-command = ""
+
+# Tell cibuildwheel to only build for Linux.
+# You can remove this to build for macOS and Windows too (on those machines).
+build = "cp*-manylinux*"
+
+

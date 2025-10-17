@@ -7,13 +7,16 @@ project(
     license: 'MIT',
     # Requires a modern Meson version
     meson_version: '>=0.64.0',
+    default_options : ['buildtype=release'],
 )
+
 
 
 py_mod = import('python')
 py = py_mod.find_installation(pure: false)
 py_dep = py.dependency()
 
+numpy_dep = dependency('numpy', required: true, fallback: ['numpy', 'numpy_dep'])
 
 # This is required for compiling modules that interact with NumPy arrays.
 incdir_numpy = run_command(py,
@@ -59,7 +62,7 @@ numpy_inc = run_command(py, ['-c', 'import numpy; print(numpy.get_include())'], 
  
 
 # Define the target for 'occultnl'
-occultquad_module = custom_target(
+occultnl_module = custom_target(
     'occultnl',
     # Output filename must be exactly what Python expects
     output: 'occultnl' + ext_suffix,
