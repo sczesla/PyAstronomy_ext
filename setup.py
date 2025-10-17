@@ -109,7 +109,7 @@ ext_modules = [extOccultnl, extOccultquad]
 setup(name='PyAstronomy_ext',
       url="http://www.hs.uni-hamburg.de/DE/Ins/Per/Czesla/PyA/PyA/index.html",
       description='Optional extension for PyAstronomy.',
-      version="1",
+      version="2",
       packages=packages,
       ext_modules=ext_modules,
       package_dir={'PyAstronomy_ext': 'PyAstronomy_ext'},
@@ -118,4 +118,3 @@ setup(name='PyAstronomy_ext',
       author='PyA group',
       author_email='stefan.czesla@hs.uni-hamburg.de',
       )
-
