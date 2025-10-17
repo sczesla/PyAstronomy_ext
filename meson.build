@@ -16,8 +16,6 @@ py_mod = import('python')
 py = py_mod.find_installation(pure: false)
 py_dep = py.dependency()
 
-numpy_dep = dependency('numpy', required: true, fallback: ['numpy', 'numpy_dep'])
-
 # This is required for compiling modules that interact with NumPy arrays.
 incdir_numpy = run_command(py,
     ['-c', 'import numpy; print(numpy.get_include())'],
